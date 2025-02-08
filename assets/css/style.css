@@ -1,0 +1,595 @@
+/* assets/css/style.css */
+
+/* ================================================
+   Reset (リセットCSS)
+================================================ */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body, h1, h2, h3, p, ul, ol, figure {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* ================================================
+     General Styles (全体的なスタイル)
+  ================================================ */
+  body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f7f8fa; /* 明るいグレー */
+      color: #202123; /* 濃いグレー */
+      line-height: 1.6;
+  }
+  
+  .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 30px;
+  }
+  
+  a {
+      color: #10a37f; /* OpenAI風のグリーン */
+      text-decoration: none;
+      transition: color 0.2s;
+  }
+  a:hover {
+      color: #0c8567;
+  }
+  
+  /* ================================================
+      Header (ヘッダー)
+  ================================================ */
+  header {
+      background-color: rgba(247, 248, 250, 0.95); /* 半透明の白 */
+      backdrop-filter: blur(10px); /* 背景ぼかし */
+      color: #202123;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  
+  .logo {
+      font-size: 1.5em;
+      font-weight: 600;
+      text-decoration: none;
+      color: #202123;
+  }
+  
+  /* Navigation (ナビゲーション) */
+  nav ul {
+      list-style: none;
+      display: flex;
+  }
+  nav li {
+      margin-left: 25px;
+  }
+  nav a {
+      color: #4d4f5c;
+      text-decoration: none;
+      transition: color 0.2s;
+      font-weight: 500;
+      display: block; /* ブロックレベル要素にして、paddingを有効にする */
+      padding: 10px 5px;
+  }
+  nav a:hover,
+  nav a.active {
+      color: #202123;
+  }
+  
+  /* Hamburger Menu (ハンバーガーメニュー) */
+  .menu-toggle {
+    display: none; /* デスクトップでは非表示 */
+    flex-direction: column;
+    cursor: pointer;
+  }
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 3px 0;
+    transition: 0.4s;
+  }
+  /* メニュー開閉時のアニメーション */
+  .menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  .menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+  
+  /* ================================================
+     Main Content (メインコンテンツ)
+  ================================================ */
+  main {
+      padding: 40px 0;
+  }
+  
+  /* ================================================
+     Hero Section (ヒーローセクション)
+  ================================================ */
+  #hero {
+      text-align: center;
+      padding: 80px 20px;
+      background-color: #f0f3f7;
+      border-radius: 10px;
+      margin-bottom: 40px;
+  }
+  
+  #hero h1 {
+      font-size: 3.5em;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #10a37f;
+  }
+  
+  #hero p {
+      font-size: 1.4em;
+      color: #4d4f5c;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.5;
+  }
+  
+  /* ================================================
+      Sections (各セクション)
+  ================================================ */
+  section {
+      padding: 60px 0;
+      border-bottom: 1px solid #e5e7eb;
+  }
+  section:last-child {
+      border-bottom: none; /* 最後のセクションは下線なし */
+  }
+  
+  h2 {
+      color: #202123;
+      font-size: 2.2em;
+      font-weight: 600;
+      margin-bottom: 1em;
+  }
+  
+  h3 {
+      color: #343541;
+      font-size: 1.6em;
+      font-weight: 500;
+      margin-top: 1.5em;
+      margin-bottom: 0.5em;
+  }
+  
+  p {
+      font-size: 1.1em;
+      margin-bottom: 1.5em;
+  }
+  .highlight {
+      font-weight: bold;
+      color: #202123;
+  }
+  .mission-statement{
+      font-style: italic;
+      color: #6c757d;
+      margin-top: 10px;
+      font-size:1.2em;
+  }
+  
+  /* ================================================
+      Cards (カード)
+  ================================================ */
+  .card {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s, box-shadow 0.2s;
+      margin-bottom: 20px;
+  }
+  
+  .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card h3 {
+      margin-top: 0;
+  }
+  
+  /* ================================================
+     Footer (フッター)
+  ================================================ */
+  footer {
+      text-align: center;
+      padding: 40px 0;
+      background-color: transparent;
+      color: #6c757d;
+      font-size: 0.9em;
+  }
+  
+  /* ================================================
+      Responsiveness (レスポンシブ対応)
+  ================================================ */
+  @media (max-width: 768px) {
+      .container {
+          padding: 0 20px;
+      }
+  
+      /* Header (ヘッダー) */
+      .header-inner {
+          flex-direction: column;
+      }
+  
+      .menu-toggle {
+          display: flex;
+      }
+  
+      nav {
+          display: none;
+          width: 100%;
+          text-align: center;
+      }
+  
+      nav.active {
+          display: flex;
+      }
+  
+      nav ul {
+          flex-direction: column;
+          width: 100%;
+      }
+  
+      nav li {
+          margin: 10px 0;
+          width: 100%;
+      }
+  
+      /* Hero Section (ヒーローセクション) */
+      #hero {
+          padding: 40px 20px;
+      }
+  
+      #hero h1 {
+          font-size: 2.5em;
+      }
+  
+      #hero p {
+          font-size: 1.2em;
+      }
+      section {
+          padding: 40px 0;
+      }
+      h2 {
+          font-size: 1.8em;
+      }
+  }
+  /* ... (既存の style.css の内容) ... */
+
+/* ================================================
+    CTA Button (CTAボタン)
+================================================ */
+.cta-button {
+    display: inline-block;
+    background-color: #10a37f;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 500;
+    transition: background-color 0.3s;
+    border: none; /* ボタンの境界線を消す */
+    cursor: pointer; /* カーソルをポインターに */
+}
+
+.cta-button:hover {
+    background-color: #0c8567;
+}
+
+/* ================================================
+   Blog Section (ブログセクション)
+================================================ */
+#blog .card {
+    margin-bottom: 20px; /* カード間のスペース */
+}
+
+#blog .card h3 {
+    margin-bottom: 0.5em;
+}
+
+/* ================================================
+    Join Us Section (参加セクション)
+================================================ */
+
+#join .cta-button {
+    margin-top: 1em;
+    display: block; /* ブロックレベル要素にして、幅いっぱいに広げる */
+    width: 100%;
+    text-align: center;
+}
+
+/* ================================================
+    Contact Section (問い合わせセクション)
+================================================ */
+
+#contact form {
+    /* ここにフォームのスタイルを追加 (後で) */
+}
+
+/* ================================================
+  　　　　　　FAQ
+================================================ */
+#faq .card{
+  margin-bottom: 1rem;
+}
+#faq .card h3{
+  margin-bottom: .5rem;
+  color: #10a37f;
+}
+/* ... (既存の style.css の内容) ... */
+
+/* ================================================
+    More Link (もっと見るリンク)
+================================================ */
+.more-link-container {
+    text-align: right; /* 右寄せ */
+    margin-top: 20px;
+}
+
+.more-link {
+    display: inline-block;
+    color: #4d4f5c;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.more-link:hover {
+    color: #10a37f;
+}
+
+.more-link i {
+    margin-left: 5px; /* アイコンとテキストの間隔 */
+}
+/*Blog*/
+#blog .card h3{
+  display: flex;
+  align-items: center;
+}
+#blog .card h3 i{
+  margin-right: 0.3em;
+}
+/* ... (style.cssの既存の内容) ... */
+
+/* ================================================
+    Project List (プロジェクト一覧)
+================================================ */
+#projects-list .card {
+    margin-bottom: 30px;
+}
+
+#projects-list .card h3 {
+    margin-bottom: 0.5em;
+    display: flex;/*アイコンとタイトルを横並びにする*/
+    align-items: center;/*アイコンとタイトルを縦方向中央揃え*/
+}
+#projects-list .card h3 i{
+    margin-right: 0.5em; /*アイコンとタイトルの余白*/
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #4d4f5c;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.project-link:hover {
+    color: #10a37f;
+}
+
+.project-link i {
+    margin-left: 5px;
+}
+/* assets/css/aro-sharp.css */
+
+/* OpenAI風のスタイルを適用 */
+
+/* 全体 */
+.aro-sharp-main {
+    background-color: #fff; /* 背景色を白に */
+    color: #343541; /* テキストカラーを濃いグレーに */
+    font-size: 1.125rem; /* フォントサイズを少し大きめに */
+}
+
+/* Hero Section */
+.aro-sharp-main .hero {
+    text-align: center;
+    padding: 6rem 0;
+    background-color: #f9f9f9; /* わずかにグレーがかった背景色 */
+    margin-bottom: 3rem;
+    border-bottom: 1px solid #eaeaea;
+
+}
+
+.aro-sharp-main .hero h1 {
+    font-size: 3.75rem; /* 大きな見出し */
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #10a37f;/*見出しの色変更*/
+}
+
+.aro-sharp-main .hero p {
+    font-size: 1.5rem;
+    color: #6c757d;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* 各セクション共通 */
+.aro-sharp-main section {
+    padding: 4rem 0;
+     border-bottom: 1px solid #eaeaea;
+}
+.aro-sharp-main section:last-child{
+  border-bottom: none;
+}
+.aro-sharp-main h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    display: flex;/*アイコンとタイトルを横並び*/
+    align-items: center;/*アイコンとタイトルを垂直方向中央揃え*/
+}
+.aro-sharp-main h2 i{/*アイコン*/
+  margin-right: 0.5em;
+}
+
+.aro-sharp-main ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.aro-sharp-main li {
+    margin-bottom: 0.75em;
+    padding-left: 1.5em;
+    position: relative;
+}
+
+/* リストのマーカーをFont Awesomeのアイコンに */
+.aro-sharp-main li::before {
+    content: "\f00c"; /* チェックマーク */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 0.2em;
+    color: #10a37f;
+}
+
+/* Call to Action */
+.aro-sharp-main .call-to-action {
+    text-align: center;
+    padding: 4rem 0;
+
+}
+.aro-sharp-main .call-to-action h2{
+    font-size: 2.2em;
+}
+/* assets/css/aro-write.css */
+
+/* Aro Writeページ専用のスタイル */
+
+.aro-write-main {
+    background-color: #fff; /* 背景を白に */
+}
+
+/* Hero Section */
+.aro-write-main .hero {
+    text-align: center;
+    padding: 6rem 0;
+    background-color: #f9f9f9;
+    margin-bottom: 3rem;
+     border-bottom: 1px solid #eaeaea;
+}
+
+.aro-write-main .hero h1 {
+    font-size: 3.75rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color:#202123;
+}
+.aro-write-main .hero h1 .experimental{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #6c757d;
+    vertical-align: top;/*上にずらす*/
+}
+
+.aro-write-main .hero p {
+    font-size: 1.5rem;
+    color: #6c757d;
+}
+
+/* 各セクション共通 */
+.aro-write-main section {
+    padding: 4rem 0;
+    border-bottom: 1px solid #eaeaea;
+}
+.aro-write-main section:last-child{
+     border-bottom: none;
+}
+
+.aro-write-main h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.aro-write-main h2 i {
+    margin-right: 0.5em;
+}
+
+/* 特徴リスト */
+.aro-write-main .feature-group {
+    margin-bottom: 3rem;
+}
+
+.aro-write-main .feature-group h3 {
+    color: #10a37f;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    display: flex;
+    align-items: center;
+}
+.aro-write-main .feature-group h3 i{
+    margin-right: 0.5em;
+}
+
+.aro-write-main .feature-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.aro-write-main .feature-list li {
+    margin-bottom: 0.75em;
+    padding-left: 1.5em;
+    position: relative;
+}
+
+.aro-write-main .feature-list li::before {
+    content: "\f00c"; /* チェックマーク */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 0.2em;
+    color: #10a37f;
+}
+
+.aro-write-main .feature-highlight {
+    font-weight: bold;
+}
+
+.aro-write-main .use-case {
+    margin-top: 1em;
+    padding-left: 1em;
+    border-left: 4px solid #10a37f;
+}
+.aro-write-main .use-case p{
+    margin-bottom: 0.5em;
+}
+
+/* Call to Action */
+.aro-write-main .call-to-action {
+    text-align: center;
+}

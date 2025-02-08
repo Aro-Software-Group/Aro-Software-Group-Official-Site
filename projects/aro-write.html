@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aro Write experimental - AI搭載の次世代ワードプロセッサ">
+    <title>Aro Write - Aro Software Group</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/aro-write.css"> <! -- Aro Write専用のCSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <a href="/" class="logo">Aro Software Group</a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="index.html" class="active">Projects</a></li>
+                    <li><a href="../index.html#blog">Blog</a></li>
+                    <li><a href="../index.html#faq">FAQ</a></li>
+                    <li><a href="../index.html#join">Join Us</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="aro-write-main">
+        <section class="hero">
+          <div class="container">
+            <h1>Aro Write <span class="experimental">experimental</span></h1>
+            <p>AIと共に、書くことを、もっと自由に、もっと創造的に。</p>
+            </div>
+        </section>
+
+        <section class="overview">
+            <div class="container">
+                <h2><i class="fas fa-pen-nib"></i> 概要</h2>
+                <p>
+                    Aro Write experimentalは、従来のワードプロセッサの枠を超えた、AIを搭載した革新的なワープロソフトウェアです。Microsoft Wordとの互換性を維持しながら、モダンで洗練されたUI/UXと、強力なAIアシスタント機能を両立させています。
+                </p>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2><i class="fas fa-list"></i> 特徴</h2>
+
+                <div class="feature-group">
+                    <h3><i class="fas fa-paint-brush"></i> デザインと使いやすさ</h3>
+                    <ul class="feature-list">
+                        <li><span class="feature-highlight">美しく、モダンなUI/UX:</span> 洗練されたデザインが、快適なライティング体験を提供。</li>
+                        <li><span class="feature-highlight">ダークモード/ライトモード対応:</span> 目に優しく、作業環境に合わせた表示モードを選択可能。</li>
+                        <li><span class="feature-highlight">カスタマイズ可能なテーマ:</span> 自分だけのAro Writeにカスタマイズ。</li>
+                        <li><span class="feature-highlight">高品質な日本語フォントライブラリ:</span> 豊富なフォントで表現力アップ。</li>
+                        <li><span class="feature-highlight">柔軟なレイアウトオプション:</span> ツールバーやサイドバーを自由に配置し、最適なワークスペースを構築。</li>
+                    </ul>
+                </div>
+
+                <div class="feature-group">
+                    <h3><i class="fas fa-file-word"></i> Word互換性と高度な機能</h3>
+                    <ul class="feature-list">
+                        <li><span class="feature-highlight">シームレスな.docxファイルの読み込み/保存:</span> Wordドキュメントをそのまま編集、保存。</li>
+                        <li><span class="feature-highlight">PDFのインポート/エクスポート:</span> PDFとの相互変換も簡単。</li>
+                        <li><span class="feature-highlight">高度な書式設定:</span> セクション区切り、段組み、スタイルセットなど、Wordと同等の機能を搭載。</li>
+                        <li><span class="feature-highlight">アウトライン表示/ナビゲーション:</span> 長文ドキュメントも効率的に編集。</li>
+                        <li><span class="feature-highlight">検索/置換（正規表現対応）:</span> 高度な検索・置換で、編集作業を高速化。</li>
+                    </ul>
+                </div>
+
+                <div class="feature-group">
+                    <h3><i class="fas fa-robot"></i> AIによる強力なアシスタント機能</h3>
+                    <ul class="feature-list">
+                        <li><span class="feature-highlight">ローカルLLM（Ollama）による文章生成・改善:</span> オフラインでもAIが文章作成を支援。
+                            <div class="use-case">
+                                <p><strong>例えば...</strong></p>
+                                <ul>
+                                  <li>「〇〇についての紹介文を書いて」と指示して、文章の叩き台を生成</li>
+                                  <li>文章を選択して「もっと自然な表現にして」と指示し、文章を改善</li>
+                                  <li>長い文章を要約させ、内容を素早く把握</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><span class="feature-highlight">オプションのGemini Pro連携:</span> より高度なAI機能が必要な場合は、Gemini Proと連携。</li>
+                        <li><span class="feature-highlight">文法チェックと文章校正:</span> LanguageToolとの統合で、高精度な文法・スペルチェック。</li>
+                        <li><span class="feature-highlight">AIによる文章要約と改善提案:</span> AIが客観的な視点から文章を評価し、改善点を提案。
+                            <div class="use-case">
+                                <p><strong>例えば...</strong></p>
+                                <ul>
+                                    <li>論文やレポートの要約をAIに作成させ、内容を素早く把握</li>
+                                    <li>ブログ記事の改善提案を受け、より読者の心に響く文章に</li>
+                                </ul>
+                            </div>
+                        </li>
+                      <li><span class="feature-highlight">類義語提案:</span>　文脈にあった、より良い言葉を提案</li>
+                    </ul>
+                </div>
+
+                 <div class="feature-group">
+                    <h3><i class="fas fa-cog"></i> その他の便利な機能</h3>
+                    <ul class="feature-list">
+                        <li><span class="feature-highlight">変更履歴の追跡とコメント機能:</span> 共同作業や添削に便利。</li>
+                        <li><span class="feature-highlight">共同編集機能（将来的な拡張）:</span> リアルタイムでの共同編集を実現予定。</li>
+                        <li><span class="feature-highlight">バージョン管理（Git連携）:</span> ドキュメントの変更履歴をGitで管理。</li>
+                        <li><span class="feature-highlight">マクロ/スクリプト機能（Pythonベース）:</span> Pythonで機能を拡張、作業を自動化。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="call-to-action">
+            <div class="container">
+                <h2>Aro Write experimentalを試す</h2>
+                <a href="https://github.com/Aro-Software-Group/Aro-Write-experimental" class="cta-button" target="_blank">GitHubへ <i class="fab fa-github"></i></a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Aro Software Group. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>
